@@ -31,7 +31,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericTextBox1 = new GrosDialog.NumericTextBox();
+            this.numericTextBox1 = new GrosDialog.Parts.NumericTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             this.numericTextBox1.Name = "numericTextBox1";
             this.numericTextBox1.Size = new System.Drawing.Size(100, 19);
             this.numericTextBox1.TabIndex = 2;
+            this.numericTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SaveAsDialogForm
             // 
@@ -94,6 +95,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private NumericTextBox numericTextBox1;
+        private Parts.NumericTextBox numericTextBox1;
     }
 }

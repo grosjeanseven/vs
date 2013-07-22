@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace GrosDialog
 {
-    public partial class SaveAsDialogForm : Form
+    internal partial class SaveAsDialogForm : Form
     {
         public SaveAsDialogForm()
         {
