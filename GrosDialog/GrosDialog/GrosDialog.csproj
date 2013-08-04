@@ -8,8 +8,8 @@
     <ProjectGuid>{D6308077-41B6-43D2-B162-9E7DFCA3B577}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GrosDialog</RootNamespace>
-    <AssemblyName>GrosDialog</AssemblyName>
+    <RootNamespace>Lightj.Win.GrosDialog</RootNamespace>
+    <AssemblyName>Lightj.Win.GrosDialog</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\GrosDialog.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Lightj.Win.GrosDialog.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

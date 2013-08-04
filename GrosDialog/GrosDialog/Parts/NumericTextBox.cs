@@ -72,7 +72,7 @@ namespace GrosDialog.Parts
         }
 
         /// <summary>
-        /// 現在の値を取得します。
+        /// 現在の値を取得または設定します。
         /// </summary>
         public int Value
         {
