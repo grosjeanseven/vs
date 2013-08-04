@@ -32,24 +32,31 @@ namespace GrosDialogTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GrosDialog.SaveAsDialog dlg = new GrosDialog.SaveAsDialog();
-            for (int i = 0; i < this.tlpMain.RowCount; i++)
+            try
             {
-                using (GrosDialog.SaveAsField field = new GrosDialog.SaveAsField()) {
-                    ComboBox cmbType = (ComboBox)this.tlpMain.GetControlFromPosition(0, i);
-                    field.Type = (GrosDialog.SaveAsField.Types)cmbType.SelectedItem;
-                    field.Caption = ((TextBox)this.tlpMain.GetControlFromPosition(1, i)).Text;
-                    field.Value = ((TextBox)this.tlpMain.GetControlFromPosition(2, i)).Text;
-                    field.Minimum = (int)((NumericUpDown)this.tlpMain.GetControlFromPosition(3, i)).Value;
-                    field.Maximum = (int)((NumericUpDown)this.tlpMain.GetControlFromPosition(4, i)).Value;
-                    dlg.Fields.Add(field);
+                GrosDialog.SaveAsDialog dlg = new GrosDialog.SaveAsDialog();
+                for (int i = 1; i < this.tlpMain.RowCount; i++)
+                {
+                    using (GrosDialog.SaveAsField field = new GrosDialog.SaveAsField())
+                    {
+                        ComboBox cmbType = (ComboBox)this.tlpMain.GetControlFromPosition(0, i);
+                        field.Type = (GrosDialog.SaveAsField.Types)cmbType.SelectedItem;
+                        field.Caption = ((TextBox)this.tlpMain.GetControlFromPosition(1, i)).Text;
+                        field.Value = ((TextBox)this.tlpMain.GetControlFromPosition(2, i)).Text;
+                        field.Minimum = (int)((NumericUpDown)this.tlpMain.GetControlFromPosition(3, i)).Value;
+                        field.Maximum = (int)((NumericUpDown)this.tlpMain.GetControlFromPosition(4, i)).Value;
+                        dlg.Fields.Add(field);
+                    }
+                }
+                if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
                 }
             }
-            if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            catch (ArgumentException ex)
             {
+                MessageBox.Show(ex.Message, ex.ParamName);
+                return;
             }
-
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

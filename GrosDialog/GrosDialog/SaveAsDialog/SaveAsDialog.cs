@@ -74,16 +74,32 @@ namespace GrosDialog
         /// <returns>エラーがある場合、true。それ以外は false を返します。</returns>
         private Boolean isErrorInProperties()
         {
-
-            // ↓コピーしてきた。作成中
-            //if (this.Maximum < this.Minimum)
-            //{
-            //    throw new ArgumentException("Minimum 以上の値を設定してください。" + this.Maximum.ToString(), "Maximum");
-            //}
-            //if ((this.Value < this.Minimum) || (this.Maximum < this.Value))
-            //{
-            //    throw new ArgumentOutOfRangeException("Value", "Minimum 未満の値か、Maximum より大きい値です。" + this.Value.ToString());
-            //}
+            foreach (GrosDialog.SaveAsField item in this.Fields)
+            {
+                if (item.Minimum < 0) { throw new ArgumentException("0 以上の値を設定してください。" + item.Minimum.ToString(), "Minimum"); }
+                if (item.Maximum < 0) { throw new ArgumentException("0 以上の値を設定してください。" + item.Maximum.ToString(), "Maximum"); }
+                switch (item.Type)
+                {
+                    case SaveAsField.Types.String:
+                        if (item.Maximum < item.Value.ToString().Length)
+                        {
+                            throw new ArgumentOutOfRangeException("Value", "最大文字数より大きい値です。" + item.Value.ToString());
+                        }
+                        break;
+                    case SaveAsField.Types.Number:
+                        if (item.Maximum < item.Minimum)
+                        {
+                            throw new ArgumentException("Minimum 以上の値を設定してください。" + item.Maximum.ToString(), "Maximum");
+                        }
+                        if ((int.Parse(item.Value.ToString()) < item.Minimum) || (item.Maximum < int.Parse(item.Value.ToString())))
+                        {
+                            throw new ArgumentOutOfRangeException("Value", "Minimum 未満の値か、Maximum より大きい値です。" + item.Value.ToString());
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
 
             return true;
         }

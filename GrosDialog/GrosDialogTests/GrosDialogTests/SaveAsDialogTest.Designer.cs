@@ -45,6 +45,11 @@
             this.txtValue1 = new System.Windows.Forms.TextBox();
             this.numMin1 = new System.Windows.Forms.NumericUpDown();
             this.numMax1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tlpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMin3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMax3)).BeginInit();
@@ -76,28 +81,33 @@
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpMain.Controls.Add(this.cmbType3, 0, 2);
-            this.tlpMain.Controls.Add(this.txtCaption3, 1, 2);
-            this.tlpMain.Controls.Add(this.txtValue3, 2, 2);
-            this.tlpMain.Controls.Add(this.numMin3, 3, 2);
-            this.tlpMain.Controls.Add(this.numMax3, 4, 2);
-            this.tlpMain.Controls.Add(this.cmbType2, 0, 1);
-            this.tlpMain.Controls.Add(this.txtCaption2, 1, 1);
-            this.tlpMain.Controls.Add(this.txtValue2, 2, 1);
-            this.tlpMain.Controls.Add(this.numMin2, 3, 1);
-            this.tlpMain.Controls.Add(this.numMax2, 4, 1);
-            this.tlpMain.Controls.Add(this.cmbType1, 0, 0);
-            this.tlpMain.Controls.Add(this.txtCaption1, 1, 0);
-            this.tlpMain.Controls.Add(this.txtValue1, 2, 0);
-            this.tlpMain.Controls.Add(this.numMin1, 3, 0);
-            this.tlpMain.Controls.Add(this.numMax1, 4, 0);
+            this.tlpMain.Controls.Add(this.cmbType3, 0, 3);
+            this.tlpMain.Controls.Add(this.txtCaption3, 1, 3);
+            this.tlpMain.Controls.Add(this.txtValue3, 2, 3);
+            this.tlpMain.Controls.Add(this.numMin3, 3, 3);
+            this.tlpMain.Controls.Add(this.numMax3, 4, 3);
+            this.tlpMain.Controls.Add(this.cmbType2, 0, 2);
+            this.tlpMain.Controls.Add(this.txtCaption2, 1, 2);
+            this.tlpMain.Controls.Add(this.txtValue2, 2, 2);
+            this.tlpMain.Controls.Add(this.numMin2, 3, 2);
+            this.tlpMain.Controls.Add(this.numMax2, 4, 2);
+            this.tlpMain.Controls.Add(this.cmbType1, 0, 1);
+            this.tlpMain.Controls.Add(this.txtCaption1, 1, 1);
+            this.tlpMain.Controls.Add(this.txtValue1, 2, 1);
+            this.tlpMain.Controls.Add(this.numMin1, 3, 1);
+            this.tlpMain.Controls.Add(this.numMax1, 4, 1);
+            this.tlpMain.Controls.Add(this.label1, 0, 0);
+            this.tlpMain.Controls.Add(this.label2, 1, 0);
+            this.tlpMain.Controls.Add(this.label3, 2, 0);
+            this.tlpMain.Controls.Add(this.label4, 3, 0);
+            this.tlpMain.Controls.Add(this.label5, 4, 0);
             this.tlpMain.Location = new System.Drawing.Point(13, 13);
             this.tlpMain.Name = "tlpMain";
-            this.tlpMain.RowCount = 3;
+            this.tlpMain.RowCount = 4;
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpMain.Size = new System.Drawing.Size(516, 212);
             this.tlpMain.TabIndex = 1;
             // 
@@ -105,14 +115,14 @@
             // 
             this.cmbType3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType3.FormattingEnabled = true;
-            this.cmbType3.Location = new System.Drawing.Point(3, 55);
+            this.cmbType3.Location = new System.Drawing.Point(3, 79);
             this.cmbType3.Name = "cmbType3";
             this.cmbType3.Size = new System.Drawing.Size(108, 20);
             this.cmbType3.TabIndex = 10;
             // 
             // txtCaption3
             // 
-            this.txtCaption3.Location = new System.Drawing.Point(117, 55);
+            this.txtCaption3.Location = new System.Drawing.Point(117, 79);
             this.txtCaption3.Name = "txtCaption3";
             this.txtCaption3.Size = new System.Drawing.Size(100, 19);
             this.txtCaption3.TabIndex = 11;
@@ -120,7 +130,7 @@
             // 
             // txtValue3
             // 
-            this.txtValue3.Location = new System.Drawing.Point(223, 55);
+            this.txtValue3.Location = new System.Drawing.Point(223, 79);
             this.txtValue3.Name = "txtValue3";
             this.txtValue3.Size = new System.Drawing.Size(100, 19);
             this.txtValue3.TabIndex = 12;
@@ -128,7 +138,7 @@
             // 
             // numMin3
             // 
-            this.numMin3.Location = new System.Drawing.Point(329, 55);
+            this.numMin3.Location = new System.Drawing.Point(329, 79);
             this.numMin3.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -140,7 +150,7 @@
             // 
             // numMax3
             // 
-            this.numMax3.Location = new System.Drawing.Point(390, 55);
+            this.numMax3.Location = new System.Drawing.Point(390, 79);
             this.numMax3.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -159,14 +169,14 @@
             // 
             this.cmbType2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType2.FormattingEnabled = true;
-            this.cmbType2.Location = new System.Drawing.Point(3, 29);
+            this.cmbType2.Location = new System.Drawing.Point(3, 53);
             this.cmbType2.Name = "cmbType2";
             this.cmbType2.Size = new System.Drawing.Size(108, 20);
             this.cmbType2.TabIndex = 5;
             // 
             // txtCaption2
             // 
-            this.txtCaption2.Location = new System.Drawing.Point(117, 29);
+            this.txtCaption2.Location = new System.Drawing.Point(117, 53);
             this.txtCaption2.Name = "txtCaption2";
             this.txtCaption2.Size = new System.Drawing.Size(100, 19);
             this.txtCaption2.TabIndex = 6;
@@ -174,7 +184,7 @@
             // 
             // txtValue2
             // 
-            this.txtValue2.Location = new System.Drawing.Point(223, 29);
+            this.txtValue2.Location = new System.Drawing.Point(223, 53);
             this.txtValue2.Name = "txtValue2";
             this.txtValue2.Size = new System.Drawing.Size(100, 19);
             this.txtValue2.TabIndex = 7;
@@ -182,7 +192,7 @@
             // 
             // numMin2
             // 
-            this.numMin2.Location = new System.Drawing.Point(329, 29);
+            this.numMin2.Location = new System.Drawing.Point(329, 53);
             this.numMin2.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -194,7 +204,7 @@
             // 
             // numMax2
             // 
-            this.numMax2.Location = new System.Drawing.Point(390, 29);
+            this.numMax2.Location = new System.Drawing.Point(390, 53);
             this.numMax2.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -213,14 +223,14 @@
             // 
             this.cmbType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType1.FormattingEnabled = true;
-            this.cmbType1.Location = new System.Drawing.Point(3, 3);
+            this.cmbType1.Location = new System.Drawing.Point(3, 27);
             this.cmbType1.Name = "cmbType1";
             this.cmbType1.Size = new System.Drawing.Size(108, 20);
             this.cmbType1.TabIndex = 0;
             // 
             // txtCaption1
             // 
-            this.txtCaption1.Location = new System.Drawing.Point(117, 3);
+            this.txtCaption1.Location = new System.Drawing.Point(117, 27);
             this.txtCaption1.Name = "txtCaption1";
             this.txtCaption1.Size = new System.Drawing.Size(100, 19);
             this.txtCaption1.TabIndex = 1;
@@ -228,7 +238,7 @@
             // 
             // txtValue1
             // 
-            this.txtValue1.Location = new System.Drawing.Point(223, 3);
+            this.txtValue1.Location = new System.Drawing.Point(223, 27);
             this.txtValue1.Name = "txtValue1";
             this.txtValue1.Size = new System.Drawing.Size(100, 19);
             this.txtValue1.TabIndex = 2;
@@ -236,7 +246,7 @@
             // 
             // numMin1
             // 
-            this.numMin1.Location = new System.Drawing.Point(329, 3);
+            this.numMin1.Location = new System.Drawing.Point(329, 27);
             this.numMin1.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -248,7 +258,7 @@
             // 
             // numMax1
             // 
-            this.numMax1.Location = new System.Drawing.Point(390, 3);
+            this.numMax1.Location = new System.Drawing.Point(390, 27);
             this.numMax1.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -262,6 +272,66 @@
             0,
             0,
             0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "タイプ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(117, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(100, 24);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "表示名称";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(223, 0);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label3.Size = new System.Drawing.Size(100, 24);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "初期値";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(329, 0);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label4.Size = new System.Drawing.Size(55, 24);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "最小値";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(390, 0);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label5.Size = new System.Drawing.Size(123, 24);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "最大値";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // SaveAsDialogTest
             // 
@@ -304,5 +374,10 @@
         private System.Windows.Forms.TextBox txtValue1;
         private System.Windows.Forms.NumericUpDown numMin1;
         private System.Windows.Forms.NumericUpDown numMax1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
