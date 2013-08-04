@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
+using System.ComponentModel;
 
 namespace GrosDialog.Parts
 {
@@ -11,8 +12,22 @@ namespace GrosDialog.Parts
     {
         bool allowSpace = false;
 
-        // Restricts the entry of characters to digits (including hex), the negative sign,
-        // the decimal point, and editing keystrokes (backspace).
+        /// <summary>
+        /// <see cref="NumericTextBox"/>
+        /// の新しいインスタンスを初期化します。
+        /// </summary>
+        public NumericTextBox()
+        {
+            base.TextAlign = HorizontalAlignment.Right;
+        }
+
+        /// <summary>
+        /// <see cref="System.Windows.Forms.Control.KeyPress"/>
+        /// イベントを発生させます。
+        /// </summary>
+        /// <param name="e">イベント データを格納している
+        /// <see cref="System.Windows.Forms.KeyPressEventArgs"/>。</param>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
             base.OnKeyPress(e);

@@ -55,21 +55,25 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaveAsDialog.cs" />
-    <Compile Include="SaveAsDialogForm.cs">
+    <Compile Include="SaveAsDialog\SaveAsDialog.cs" />
+    <Compile Include="SaveAsDialog\SaveAsDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaveAsDialogForm.Designer.cs">
+    <Compile Include="SaveAsDialog\SaveAsDialogForm.Designer.cs">
       <DependentUpon>SaveAsDialogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaveAsDialog\SaveAsField.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NumberDigitsDialog\NumberDigitsDialogForm.resx">
       <DependentUpon>NumberDigitsDialogForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SaveAsDialogForm.resx">
+    <EmbeddedResource Include="SaveAsDialog\SaveAsDialogForm.resx">
       <DependentUpon>SaveAsDialogForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

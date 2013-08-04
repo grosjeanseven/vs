@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrosDialogTest", "GrosDialogTest\GrosDialogTest.csproj", "{1CC86757-9D05-442B-B821-81EA7B261488}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrosDialogTests", "GrosDialogTests\GrosDialogTests.csproj", "{1CC86757-9D05-442B-B821-81EA7B261488}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrosDialog", "..\GrosDialog\GrosDialog.csproj", "{D6308077-41B6-43D2-B162-9E7DFCA3B577}"
 EndProject

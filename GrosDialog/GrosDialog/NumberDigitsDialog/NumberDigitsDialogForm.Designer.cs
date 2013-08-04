@@ -32,7 +32,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cancelButton = new System.Windows.Forms.Button();
             this.mainLabel = new System.Windows.Forms.Label();
-            this.mainTextBox = new System.Windows.Forms.TextBox();
+            this.mainTextBox = new GrosDialog.Parts.NumericTextBox();
             this.mainNum = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.downButton = new System.Windows.Forms.Button();
@@ -187,7 +187,7 @@
         private System.Windows.Forms.Button cancelButton;
         internal System.Windows.Forms.Label mainLabel;
         internal System.Windows.Forms.NumericUpDown mainNum;
-        private System.Windows.Forms.TextBox mainTextBox;
+        private GrosDialog.Parts.NumericTextBox mainTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button downButton;
         private System.Windows.Forms.Button upButton;
