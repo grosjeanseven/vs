@@ -47,12 +47,16 @@ namespace GrosDialog
                     case SaveAsField.Types.String:
                         TextBox txt = new TextBox();
                         txt.MaxLength = this.Fields[i].Maximum;
+                        txt.Text = this.Fields[i].Value.ToString();
                         frm.tlpMain.Controls.Add(txt, 1, i);
                         break;
                     case SaveAsField.Types.Number:
                         GrosDialog.Parts.NumericTextBox ntb = new GrosDialog.Parts.NumericTextBox();
                         ntb.MaxLength = this.Fields[i].Maximum.ToString().Length;
+                        ntb.Text = this.Fields[i].Value.ToString();
+                        ntb.Tag = i;
                         frm.tlpMain.Controls.Add(ntb, 1, i);
+                        ntb.Validating += new System.ComponentModel.CancelEventHandler(NumericTextBox_Validating);
                         break;
                     default:
                         break;
@@ -66,6 +70,24 @@ namespace GrosDialog
                 //this.Value = (Int32)frm.mainNum.Value;
             }
             return result;
+        }
+
+        /// <summary>
+        /// Number タイプの値を検証します。
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void NumericTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            GrosDialog.Parts.NumericTextBox ntb = (GrosDialog.Parts.NumericTextBox)sender;
+            if (ntb.Text.Equals(string.Empty)) { return; }
+            int i = int.Parse(ntb.Tag.ToString());
+            GrosDialog.SaveAsField item = this.Fields[i];
+            if ((ntb.Value < item.Minimum) || (item.Maximum < ntb.Value))
+            {
+                MessageBox.Show("Need to " + item.Minimum.ToString() + " To " + item.Maximum.ToString());
+                e.Cancel = true;
+            }
         }
 
         /// <summary>
