@@ -8,9 +8,11 @@ using System.ComponentModel;
 
 namespace GrosDialog.Parts
 {
+    /// <summary>
+    /// 数値専用のテキストボックスを提供します。
+    /// </summary>
     public class NumericTextBox : TextBox
     {
-        bool allowSpace = false;
 
         /// <summary>
         /// <see cref="NumericTextBox"/>
@@ -19,6 +21,7 @@ namespace GrosDialog.Parts
         public NumericTextBox()
         {
             base.TextAlign = HorizontalAlignment.Right;
+            this.AllowSpace = false;
         }
 
         /// <summary>
@@ -56,7 +59,7 @@ namespace GrosDialog.Parts
             //    {
             //     // Let the edit control handle control and alt key combinations
             //    }
-            else if (this.allowSpace && e.KeyChar == ' ')
+            else if (this.AllowSpace && e.KeyChar == ' ')
             {
 
             }
@@ -68,33 +71,26 @@ namespace GrosDialog.Parts
             }
         }
 
-        public int IntValue
+        /// <summary>
+        /// 現在の値を取得します。
+        /// </summary>
+        public int Value
         {
+            set
+            {
+                this.Text = value.ToString();
+            }
             get
             {
                 return Int32.Parse(this.Text);
             }
         }
 
-        public decimal DecimalValue
-        {
-            get
-            {
-                return Decimal.Parse(this.Text);
-            }
-        }
+        /// <summary>
+        /// スペースの入力を許す
+        /// かどうかを示す値を取得または設定します。
+        /// </summary>
+        private bool AllowSpace { set; get;}
 
-        public bool AllowSpace
-        {
-            set
-            {
-                this.allowSpace = value;
-            }
-
-            get
-            {
-                return this.allowSpace;
-            }
-        }
     }
 }
